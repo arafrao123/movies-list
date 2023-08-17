@@ -5,9 +5,6 @@ import { authOptions } from "./api/auth/[...nextauth]/route";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
-  useEffect(() => {
-    console.log("session-->", session);
-  }, [session]);
   if (session) redirect("/dashboard");
   console.log("session-->", session);
   return <Login />;

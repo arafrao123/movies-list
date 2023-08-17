@@ -14,6 +14,18 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    moviesToBeWatched: [
+      {
+        title: String,
+        genre: String,
+      },
+    ],
+    moviesWatched: [
+      {
+        title: String,
+        genre: String,
+      },
+    ],
   },
   { timestamps: true }
 );
